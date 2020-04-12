@@ -81,6 +81,7 @@ h1 {
   display: flex;
   flex-direction: column;
   height: 100%;
+  visibility: hidden;
 }
 
 .no-overflow {
@@ -94,20 +95,20 @@ h1 {
   padding: 10% 0 0 0;
 }
 
-#list {
+.list {
   font-size: 2em;
   margin: 10%;
 }
 
-#list > li {
+.list > li {
   margin: 5% auto;
 }
 
-#list > li:nth-child(odd) {
+.list > li:nth-child(odd) {
   text-align: left;
 }
 
-#list > li:nth-child(even) {
+.list > li:nth-child(even) {
   text-align: right;
 }
 
@@ -116,7 +117,7 @@ h1 {
     font-size: 18px;
   }
 
-  #list {
+  .list {
     margin: 10% 25%;
   }
 
@@ -139,7 +140,7 @@ h1 {
     padding: 3% 0 0 0;
   }
 
-  #list {
+  .list {
     margin: 5% 25%;
   }
 
@@ -149,7 +150,7 @@ h1 {
     font-size: 24px;
   }
 
-  #list {
+  .list {
     margin: 5% 30%;
   }
 
