@@ -1,4 +1,5 @@
 import React, { useRef, useEffect} from "react"
+import Helmet from "react-helmet"
 import gsap from "gsap"
 import { Link } from "gatsby"
 
@@ -15,12 +16,16 @@ const IndexPage = () => {
     tl.from(bottomRef, {duration:0.5, opacity:0, y:200, ease: "power1.in"}, "-=0.5");
     tl.from(artRef, {duration:0.25, opacity:0, y:20, ease:"back.out"});
     tl.from(workRef, {duration:0.25, opacity:0, y:30, ease:"back.out"}, "-=0.125");
+    tl.to(wholeRef, {overflow: "auto"});
   }, [tl]);
 
 
   return (
     <div className="flex" ref={element => {wholeRef = element}}>
       <SEO title="Home" />
+      <Helmet>
+      <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Proza+Libre&display=swap" rel="stylesheet"/>
+      </Helmet>
       <header>
         <h1 className="name" ref={element => {nameRef = element}}>Madhav Kumar</h1>
         <p className="body" ref={element => {descRef = element}}>

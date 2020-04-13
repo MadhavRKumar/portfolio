@@ -82,10 +82,7 @@ h1 {
   flex-direction: column;
   height: 100%;
   visibility: hidden;
-}
-
-.no-overflow {
-  overflow-y:  hidden;
+  overflow: hidden;
 }
 
 .bottom-half {
