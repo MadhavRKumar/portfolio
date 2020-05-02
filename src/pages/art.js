@@ -17,11 +17,14 @@ export default Art
 
 const LabeledImage = ({image}) => ( 
 	<div className="art-image"> 
-	<p className="art-label">{image.node.name}</p>
-	<Img resolutions={image.node.childImageSharp.resolutions} />
+	<p className="art-label">{capitalizeFirst(image.node.name)}</p>
+	<Img fluid={image.node.childImageSharp.fluid} />
 	</div>
 ) 
 
+function capitalizeFirst(str) {
+	return str.charAt(0).toUpperCase() + str.substring(1);
+}
 
 export const query = graphql`
 	query ImagesQuery {
@@ -30,8 +33,8 @@ export const query = graphql`
 				node {
 					name
 					childImageSharp{
-						resolutions(width:375, height:375) {
-						...GatsbyImageSharpResolutions
+						fluid(maxWidth: 375) {
+						...GatsbyImageSharpFluid
 						}
 					}
 				}

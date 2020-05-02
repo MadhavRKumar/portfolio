@@ -89,13 +89,12 @@ h1 {
 
 .flex-wrapper {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
 }
 
 .art-image {
-  margin: 5%;
+  margin: 5% 10%;
   padding: 40px;
   background: #f8f8f8;
   position: relative;
@@ -103,12 +102,12 @@ h1 {
 
 .art-label {
   position: absolute;
-  top: 2.5%;
+  top: 0;
   left: 50%;
   font-size: 1.5em;
   font-weight: bold;
   font-family: 'Cormorant Garamond', serif;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, 25%);
 }
 
 .bottom-half {
@@ -182,7 +181,10 @@ a:visited {
   .list {
     margin: 5% 25%;
   }
-
+  
+  .art-image {
+	padding: 80px;
+  }
 }
 @media screen and (min-width: 1300px) {
   html {
