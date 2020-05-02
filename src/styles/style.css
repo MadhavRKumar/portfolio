@@ -48,7 +48,9 @@ table {
 }
 
 /*  End of reset */
-
+:root {
+  --black: #383838;
+}
 html {
   height: 100%;
   font-size: 16px;
@@ -63,7 +65,7 @@ html {
 h1 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 4em;
-  color: #383838;
+  color: var(--black);
   text-align: center;
   margin: 15% auto;
   font-weight: bold;
@@ -85,9 +87,30 @@ h1 {
   overflow: hidden;
 }
 
+.flex-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.art-image {
+  margin: 5%;
+  padding: 40px;
+  background: #f8f8f8;
+  position: relative;
+}
+
+.art-label {
+  position: absolute;
+  top: 2.5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
 .bottom-half {
   flex-grow: 1;
-  background: #383838;
+  background: var(--black);
   color: #ffffff;
   padding: 10% 0 0 0;
 }
@@ -128,6 +151,10 @@ a:visited {
 
   .list {
     margin: 10% 25%;
+  }
+  
+  .art-image {
+	padding: 60px;
   }
 
 }
