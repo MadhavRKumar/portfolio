@@ -11,10 +11,10 @@ const IndexPage = () => {
 
   useEffect(() => {
     tl.to(wholeRef, {visibility: "visible"});
-    tl.from(nameRef, { duration: 1, x: 1000, ease: "back.inOut", opacity: 0});
-    tl.from(descRef, {duration: 0.25, opacity:0, y: -5, ease: "power2.in" });
-    tl.from(bottomRef, {duration:0.5, opacity:0, y:200, ease: "power1.in"}, "-=0.5");
-    tl.from(artRef, {duration:0.25, opacity:0, y:20, ease:"back.out"});
+    tl.from(nameRef, { duration: 0.75, y:-5, ease: "back.inOut", opacity: 0});
+    tl.from(descRef, {duration: 0.25, opacity:0, y: -5, ease: "power2.in" }, "-=0.45");
+    tl.from(bottomRef, {duration:0.5, opacity:0, y:200, ease: "power1.in"}, "-=0.75");
+    tl.from(artRef, {duration:0.25, opacity:0, y:20, ease:"back.out"}, "-=0.25");
     tl.from(workRef, {duration:0.25, opacity:0, y:30, ease:"back.out"}, "-=0.125");
     tl.to(wholeRef, {overflow: "auto"});
   }, [tl]);
