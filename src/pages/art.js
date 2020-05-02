@@ -1,11 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
-import SEO from "../components/seo"
+import Meta from "../components/meta"
 
 const Art = ({data}) => (
 	<> 
-	<SEO title="Art" />
+	<Meta title="Art" />
 	<div className="flex-wrapper">
 	{data.allFile.edges.map(img => {
 		return <LabeledImage image={img} />})}
