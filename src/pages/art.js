@@ -1,16 +1,16 @@
 import React from "react"
-import { Link } from "gatsby"
 import Img from "gatsby-image"
-import Meta from "../components/meta"
+import Layout from "../components/layout"
 
-const Art = ({data}) => (
-	<> 
-	<Meta title="Art" />
+const Art = ({data}) => ( 
+	<Layout title="Art">
+	<h1>Generative Art</h1>
+	<p className="body">Made using <a className="link" href="https://github.com/mattdesl/canvas-sketch">canvas-sketch</a></p>
 	<div className="flex-wrapper">
 	{data.allFile.edges.map(img => {
 		return <LabeledImage image={img} />})}
 	</div>
-	</>
+	</Layout>
 )
 
 export default Art

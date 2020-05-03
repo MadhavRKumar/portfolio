@@ -1,8 +1,7 @@
 import React, { useRef, useEffect} from "react"
-import Helmet from "react-helmet"
 import gsap from "gsap"
 import { Link } from "gatsby"
-import Meta from "../components/meta"
+import Layout from "../components/layout"
 
 const IndexPage = () => {
   let wholeRef = useRef(null), nameRef = useRef(null), descRef = useRef(null), bottomRef = useRef(null), workRef = useRef(null), artRef = useRef(null);
@@ -20,8 +19,8 @@ const IndexPage = () => {
 
 
   return (
-    <div className="flex" ref={element => {wholeRef = element}}>
-		<Meta title="Home" />    
+	<Layout title="Home">
+    <div className="flex" ref={element => {wholeRef = element}}> 
 		<header>
         <h1 className="name" ref={element => {nameRef = element}}>Madhav Kumar</h1>
         <p className="body" ref={element => {descRef = element}}>
@@ -39,6 +38,7 @@ const IndexPage = () => {
         </ul>
       </div>
     </div>
+	</Layout>
   )
 }
 export default IndexPage
