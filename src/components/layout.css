@@ -115,7 +115,6 @@ h1 {
   flex-grow: 1;
   background: var(--black);
   color: #ffffff;
-  padding: 10% 0 0 0;
 }
 
 .list {
@@ -124,7 +123,7 @@ h1 {
 }
 
 .list > li {
-  margin: 5% auto;
+  margin: 10% auto;
 }
 
 .list > li:nth-child(odd) {
@@ -133,6 +132,11 @@ h1 {
 
 .list > li:nth-child(even) {
   text-align: right;
+}
+
+.list > li:nth-child(1) {
+  text-align: center;
+  margin: auto auto 20% auto;
 }
 
 a {
@@ -151,15 +155,18 @@ a:visited {
   font-weight:bold;
   color: pink;
 }
+
+@media screen and (min-width:600px) {
+  .list {
+    margin: 10% 20%;
+  }
+}
+
 @media screen and (min-width: 700px) {
   html {
     font-size: 18px;
   }
 
-  .list {
-    margin: 10% 25%;
-  }
-  
   .art-image {
 	padding: 60px;
   }
@@ -180,7 +187,6 @@ a:visited {
   }
 
   .bottom-half {
-    padding: 3% 0 0 0;
   }
 
   .list {
