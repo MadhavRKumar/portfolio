@@ -27,9 +27,9 @@ function sketch (p) {
 
 	p.setup = function() {
 
-		p.createCanvas(600,400);
+		p.createCanvas(300,300);
 
-		let N = 500;
+		let N = 300;
 		for(let i = 0; i < N; i++) {
 			let newPoint = makePoint();	
 			floatingPoints.push(newPoint);
@@ -37,7 +37,7 @@ function sketch (p) {
 	}
 	
 	p.draw = function () {
-		p.background(255);
+		p.background(255, 15);
 		p.textSize(textSize);
 		p.textAlign(p.CENTER);
 		if(textString) {
@@ -53,22 +53,24 @@ function sketch (p) {
 					curTarget = points[(i+curPoint.counter)%pointsLen];
 					curPoint.target = p.createVector(curTarget.x-bounds.w/2, curTarget.y+bounds.h/2);
 					let distance = p5.Vector.sub(curPoint.pos, curPoint.target).mag();
-					if(distance >= 50) {
+					if(distance >= 25) {
 						curPoint.pos = curPoint.target;
 						curPoint.trail = [];
 					}
-					curPoint.counter += Math.round(p.random(2,6));
+					curPoint.counter += Math.round(p.random(1,3));
 					curPoint.arrived = false;
 				}
 			}
 		}
 
 		for(let point of floatingPoints) {
+			p.strokeWeight(point.r);
 			p.noFill();
 			p.beginShape();
-			for(let v of point.trail) {
-				p.vertex(v.x, v.y);
-			}
+			for(let i = 0; i < point.trail.length; i++) {
+				let cur = point.trail[i];
+				p.vertex(cur.x, cur.y);
+			}	
 			p.endShape();
 			point.update();
 		}
@@ -79,36 +81,47 @@ function sketch (p) {
 		if (p.keyCode === p.ENTER) {
 			reset();
 			textString = "ART";
-			points = font.textToPoints(textString, 300, 200, textSize, {sampleFactor:0.15});
-			bounds = font.textBounds(textString, 300, 200, textSize);
+			generateText(textString, 125);
 		}
 		if (p.keyCode === 32) {
 			reset();
 			textString = "WORK";
-			points = font.textToPoints(textString, 300, 200, textSize, {sampleFactor:0.15});
-			bounds = font.textBounds(textString, 300, 200, textSize);
+			generateText(textString, 80);
+		}
+		if (p.key === 'a') {
+			reset();
+			textString = "?";
+			generateText(textString, 300);
+
 		}
 		if(p.key === 'r') {
 			reset();
 			textString = "";
 		}
 	}
+
+	function generateText(str, size) {
+		points = font.textToPoints(str, p.width/2, p.height/2, size, {sampleFactor:0.15});
+		bounds = font.textBounds(str, p.width/2, p.height/2, size);
+	}
 	
 	function makePoint() {
 		let newPoint = {x:0, y:0, r:0}
 		newPoint.pos = p.createVector(p.random(0, p.width), p.random(0, p.height));
-		newPoint.r = p.random(4, 6);
-		newPoint.vel = p.createVector(p.random(-1, 1), p.random(-1, 1));
+		newPoint.r = p.random(0.2, 0.75);
+		newPoint.vel = p.createVector(p.random(0, Math.PI*2), p.random(0, Math.PI*2));
 		newPoint.acceleration = p.createVector();
-		newPoint.maxSpeed = p.random(15, 30);
+		newPoint.maxSpeed = p.random(30, 100);
 		newPoint.target = null;
 		newPoint.arrived = false;
 		newPoint.counter = 1;
 		newPoint.trail = [newPoint.pos];
 		newPoint.update = () => {
+			newPoint.wander();
 			newPoint.seek();
 			newPoint.pos = p5.Vector.add(newPoint.pos, newPoint.vel);
 			newPoint.vel = p5.Vector.add(newPoint.vel, newPoint.acceleration);
+			newPoint.vel.limit(2);
 			newPoint.acceleration.mult(0);
 			if(newPoint.pos.x > p.width || newPoint.pos.x < 0) {
 				newPoint.vel.x *=-1;
@@ -117,11 +130,13 @@ function sketch (p) {
 				newPoint.vel.y *=-1;
 			}
 
-			if(newPoint.trail.length > 20) {
+			if(newPoint.trail.length > 10) {
 				newPoint.trail.shift()
 			}
 			newPoint.trail.push(newPoint.pos.copy());
 		}
+
+		newPoint.steerLimit = p.random(0.3, 0.5);
 
 		newPoint.seek = () => {
 			if(newPoint.target) {
@@ -137,8 +152,26 @@ function sketch (p) {
 
 				desiredVel.setMag(speed);
 				let steering = p5.Vector.sub(desiredVel, newPoint.vel);
-				steering.limit(0.5);
+				steering.limit(newPoint.steerLimit);
 				newPoint.acceleration.add(steering);
+			}
+		}
+
+		newPoint.wanderAngle = p.random(0, Math.PI*2);
+
+		newPoint.wander = () => {
+			if(!newPoint.target) {
+			let circleCenter = newPoint.vel.copy();
+			circleCenter.normalize();
+			circleCenter.mult(5);
+			
+			let displacement = p5.Vector.fromAngle(newPoint.wanderAngle);
+			displacement.mult(1);
+
+			newPoint.wanderAngle += (p.random(-Math.PI/2, Math.PI/2));
+			
+			circleCenter.add(displacement);
+			newPoint.acceleration.add(circleCenter);
 			}
 		}
 
