@@ -29,9 +29,9 @@ function sketch (p) {
 	}
 
 	p.myCustomRedrawAccordingToNewPropsHandler = function (props) {
-		if (props.text) {
-			textString = props.text;
-			reset();
+		textString = props.text;
+		reset();
+		if(textString) {
 			generateText(textString, 100);
 		}
 	}
@@ -88,29 +88,7 @@ function sketch (p) {
 
 	}
 	
-	p.keyPressed = function() {
-		if (p.keyCode === p.ENTER) {
-			reset();
-			textString = "ART";
-			generateText(textString, 125);
-		}
-		if (p.keyCode === 32) {
-			reset();
-			textString = "WORK";
-			generateText(textString, 80);
-		}
-		if (p.key === 'a') {
-			reset();
-			textString = "?";
-			generateText(textString, 300);
-
-		}
-		if(p.key === 'r') {
-			reset();
-			textString = "";
-		}
-	}
-
+		
 	function generateText(str, size) {
 		points = font.textToPoints(str, p.width/2, p.height/2, size, {sampleFactor:0.15});
 		bounds = font.textBounds(str, p.width/2, p.height/2, size);
