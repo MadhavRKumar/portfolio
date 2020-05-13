@@ -94,6 +94,13 @@ h1 {
   justify-content: center;
 }
 
+.horizontal-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 .art-image {
   margin: 5% 10%;
   padding: 40px;

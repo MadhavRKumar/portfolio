@@ -1,11 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import P5Wrapper from 'react-p5-wrapper'
 import p5 from 'p5'
 import Layout from '../components/layout'
-import fontPath from "../static/proza-libre-latin-500.woff"
+import Form from '../components/form'
+import fontPath from '../static/proza-libre-latin-500.woff'
+
 const Contact = () => {
-	let text = "ART";
-	return (<Layout title="Contact"><P5Wrapper sketch={sketch} text={text}/></Layout>)
+	const [text, setText] = useState("");
+
+	return (
+		<Layout title="Contact">
+		<div class="horizontal-flex">
+		<Form onChange={setText}/>	
+		<P5Wrapper sketch={sketch} text={text}/>
+		</div>
+		</Layout>)
 }
 
 function sketch (p) {
@@ -19,9 +28,11 @@ function sketch (p) {
 		font = p.loadFont(fontPath);
 	}
 
-	p.myCustomRedrwaAccordingToNewPropsHandler = function (props) {
+	p.myCustomRedrawAccordingToNewPropsHandler = function (props) {
 		if (props.text) {
 			textString = props.text;
+			reset();
+			generateText(textString, 100);
 		}
 	}
 
