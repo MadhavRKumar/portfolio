@@ -118,6 +118,12 @@ h1 {
   transform: translate(-50%, 33%);
 }
 
+canvas {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
 .bottom-half {
   flex-grow: 1;
   background: var(--black);

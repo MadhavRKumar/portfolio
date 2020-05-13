@@ -10,10 +10,8 @@ const Contact = () => {
 
 	return (
 		<Layout title="Contact">
-		<div class="horizontal-flex">
 		<Form onChange={setText}/>	
 		<P5Wrapper sketch={sketch} text={text}/>
-		</div>
 		</Layout>)
 }
 
@@ -32,13 +30,13 @@ function sketch (p) {
 		textString = props.text;
 		reset();
 		if(textString) {
-			generateText(textString, 100);
+			generateText(textString, 175);
 		}
 	}
 
 	p.setup = function() {
 
-		p.createCanvas(300,300);
+		p.createCanvas(p.windowWidth, p.windowHeight);
 
 		let N = 300;
 		for(let i = 0; i < N; i++) {
