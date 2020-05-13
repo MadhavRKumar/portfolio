@@ -120,7 +120,7 @@ function sketch (p) {
 		let newPoint = {x:0, y:0, r:0}
 		newPoint.pos = p.createVector(p.random(0, p.width), p.random(0, p.height));
 		newPoint.r = p.random(0.2, 0.75);
-		newPoint.vel = p.createVector(p.random(0, Math.PI*2), p.random(0, Math.PI*2));
+		newPoint.vel = p.createVector(p.random(-1, 1), p.random(-1, 1));
 		newPoint.acceleration = p.createVector();
 		newPoint.maxSpeed = p.random(30, 100);
 		newPoint.target = null;
