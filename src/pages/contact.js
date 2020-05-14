@@ -62,7 +62,7 @@ function sketch (p) {
 					curTarget = points[(i+curPoint.counter)%pointsLen];
 					curPoint.target = p.createVector(curTarget.x-bounds.w/2, curTarget.y+bounds.h/2);
 					let distance = p5.Vector.sub(curPoint.pos, curPoint.target).mag();
-					if(distance >= 25) {
+					if(distance >= 40) {
 						curPoint.pos = curPoint.target;
 						curPoint.trail = [];
 					}
@@ -88,7 +88,7 @@ function sketch (p) {
 	
 		
 	function generateText(str, size) {
-		points = font.textToPoints(str, p.width/2, p.height/2, size, {sampleFactor:0.15});
+		points = font.textToPoints(str, p.width/2, p.height/2, size, {sampleFactor:0.1});
 		bounds = font.textBounds(str, p.width/2, p.height/2, size);
 	}
 	
@@ -108,7 +108,12 @@ function sketch (p) {
 			newPoint.seek();
 			newPoint.pos = p5.Vector.add(newPoint.pos, newPoint.vel);
 			newPoint.vel = p5.Vector.add(newPoint.vel, newPoint.acceleration);
-			newPoint.vel.limit(2);
+			if(newPoint.target) {
+				newPoint.vel.limit(10);
+			}
+			else {
+				newPoint.vel.limit(5);
+			}
 			newPoint.acceleration.mult(0);
 			if(newPoint.pos.x > p.width || newPoint.pos.x < 0) {
 				newPoint.vel.x *=-1;
@@ -117,23 +122,23 @@ function sketch (p) {
 				newPoint.vel.y *=-1;
 			}
 
-			if(newPoint.trail.length > 10) {
+			if(newPoint.trail.length > 5) {
 				newPoint.trail.shift()
 			}
 			newPoint.trail.push(newPoint.pos.copy());
 		}
 
-		newPoint.steerLimit = p.random(0.3, 0.5);
+		newPoint.steerLimit = p.random(0.5, 1);
 
 		newPoint.seek = () => {
 			if(newPoint.target) {
 				let desiredVel = p5.Vector.sub(newPoint.target, newPoint.pos);
 				let d = desiredVel.mag();
 				let speed = newPoint.maxSpeed;
-				if( d < 250 ) {
-					speed = p.map(d, 0, 250, 0, newPoint.maxSpeed);
+				if( d < 500 ) {
+					speed = p.map(d, 0, 500, 0, newPoint.maxSpeed);
 				}
-				if(d <= 0.1) {
+				if(d <= 5) {
 					newPoint.arrived = true;
 				}
 
@@ -145,15 +150,17 @@ function sketch (p) {
 		}
 
 		newPoint.wanderAngle = p.random(0, Math.PI*2);
+		newPoint.circleSize = p.random(0.5, 1);
+		newPoint.dispForce = p.random(-10, 10);
 
 		newPoint.wander = () => {
 			if(!newPoint.target) {
 			let circleCenter = newPoint.vel.copy();
 			circleCenter.normalize();
-			circleCenter.mult(5);
+			circleCenter.mult(newPoint.circleSize);
 			
 			let displacement = p5.Vector.fromAngle(newPoint.wanderAngle);
-			displacement.mult(1);
+			displacement.mult(newPoint.dispForce);
 
 			newPoint.wanderAngle += (p.random(-Math.PI/2, Math.PI/2));
 			
