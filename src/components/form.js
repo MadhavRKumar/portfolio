@@ -9,30 +9,21 @@ const Form = ({onChange}) => {
 	}
 
 	return (
-		<form class="flex-wrapper" method="post" action="#">
-			<label>
-			Name
+		<form class="flex-wrapper contact" method="post" action="#">
+			<label>Name</label>
 			<input type="text" name="name" id="name" />
-			</label>
-			<label>
-				Email
-				<input type="email" name="email" id="email" />
-			</label>
-			<label>
-				Subject
+			<label>Email</label>
+			<input type="email" name="email" id="email" />
+			<label>Subject</label>
 			<select name="subject" id="subject" onChange={handleChange}>
 				<option value="">Select...</option>
 				<option value="ART">Art</option>
 				<option value="WORK">Work</option>
 				<option value="?">Other</option>
 			</select>
-			</label>
-			<label>
-				Message
-				<textarea name="message" id="message" rows="5" />
-			</label>
+			<label>Message</label>
+			<textarea name="message" id="message" rows="5" />
 			<button type="submit">Send</button>
-			<input type="reset" value="Clear" />
 		</form>
 	)
 }

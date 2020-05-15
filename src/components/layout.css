@@ -152,6 +152,21 @@ canvas {
   margin: auto auto 20% auto;
 }
 
+.contact {
+  margin: 10% 20%;
+}
+
+label {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 60%, rgba(255,255,255,0) 100%); 
+  text-align: center;
+  padding: 1% 0;
+}
+
+input, select {
+  margin: 1% 0 5% 0;
+}
+
 a {
   text-decoration: none;
 }
