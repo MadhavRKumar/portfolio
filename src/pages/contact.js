@@ -29,7 +29,8 @@ function sketch (p) {
 		textString = props.text;
 		reset();
 		if(textString) {
-			generateText(textString, p.width/(textString.length + 1));
+			let denom = textString.length > 1 ? textString.length : 2;
+			generateText(textString, p.width/denom);
 		}
 	}
 
