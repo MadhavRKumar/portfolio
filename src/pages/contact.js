@@ -18,7 +18,6 @@ const Contact = () => {
 function sketch (p) {
     let font;
 	let textString;
-	let textSize = 175;
 	let floatingPoints = [];
 	let points, bounds;
 
@@ -30,7 +29,7 @@ function sketch (p) {
 		textString = props.text;
 		reset();
 		if(textString) {
-			generateText(textString, 175);
+			generateText(textString, p.width/(textString.length + 1));
 		}
 	}
 
@@ -38,7 +37,7 @@ function sketch (p) {
 
 		p.createCanvas(p.windowWidth, p.windowHeight);
 
-		let N = 300;
+		let N = (p.width*p.height)/1000;
 		for(let i = 0; i < N; i++) {
 			let newPoint = makePoint();	
 			floatingPoints.push(newPoint);
@@ -47,7 +46,6 @@ function sketch (p) {
 	
 	p.draw = function () {
 		p.background(255, 15);
-		p.textSize(textSize);
 		p.textAlign(p.CENTER);
 		if(textString) {
 		
