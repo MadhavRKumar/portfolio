@@ -162,8 +162,26 @@ label {
   padding: 1% 0;
 }
 
-input, select {
+legend {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255, 0.75) 100%); 
+  padding: 1% 0;
+}
+
+legend {
+  margin: 1% 0;
+}
+
+fieldset > label {
+  margin: 0;
+}
+
+input{
   margin: 1% 0 5% 0;
+}
+
+input[type="radio"] {
+  margin: 2.5%;
 }
 
 a {

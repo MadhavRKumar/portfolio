@@ -8,19 +8,18 @@ const Form = ({onChange}) => {
 	}
 
 	return (
-		<form class="flex-wrapper contact" method="post" action="#">
-			<label>Name</label>
+		<form className="flex-wrapper contact" method="post" action="#">
+			<label htmlFor="name">Name</label>
 			<input type="text" name="name" id="name" />
-			<label>Email</label>
+			<label htmlFor="email">Email</label>
 			<input type="email" name="email" id="email" />
-			<label>Subject</label>
-			<select name="subject" id="subject" onChange={handleChange}>
-				<option value="">Select...</option>
-				<option value="ART">Art</option>
-				<option value="WORK">Work</option>
-				<option value="?">Other</option>
-			</select>
-			<label>Message</label>
+			<fieldset className="flex-wrapper">
+				<legend>Subject</legend>
+				<label htmlFor="work"><input onChange={handleChange} type="radio" name="subject" id="work" value="WORK"/>Work</label>	
+				<label htmlFor="art"><input onChange={handleChange} type="radio" name="subject" id="art" value="ART"/>Art</label>	
+				<label htmlFor="other"><input onChange={handleChange} type="radio" name="subject" id="other" value="?"/>Other</label>	
+			</fieldset>
+			<label htmlFor="message">Message</label>
 			<textarea name="message" id="message" rows="5" />
 			<button type="submit">Send</button>
 		</form>
