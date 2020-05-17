@@ -108,7 +108,7 @@ function sketch (p) {
 	function generateText(str) {
 		let denom = textString.length > 1 ? textString.length : 2;
 		let size = Math.min(p.width, p.height)/denom;
-		let hFrac = 5.0/12.0;
+		let hFrac = p.height > p.width ? 1.0/3.0 : 5.0/12.0;
 		points = font.textToPoints(str, p.width/2, p.height*hFrac, size, {sampleFactor:0.1});
 		bounds = font.textBounds(str, p.width/2, p.height*hFrac, size);
 	}
