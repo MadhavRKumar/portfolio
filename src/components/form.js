@@ -5,7 +5,6 @@ const Form = ({onChange}) => {
 	
 	const handleChange = (e) => {
 		onChange(e.target.value);
-		console.log(e.target.value);
 	}
 
 	return (
