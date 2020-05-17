@@ -189,6 +189,20 @@ textarea {
   font-family: inherit;
 }
 
+button[type="submit"] {
+  border: none;
+  margin: 1% 0;
+  font-family: inherit;
+  font-weight: bold;
+  background: var(--black);
+  padding: 2.5%;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background: #585858;
+}
+
 a {
   text-decoration: none;
 }
