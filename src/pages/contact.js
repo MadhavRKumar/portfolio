@@ -18,6 +18,7 @@ const Contact = () => {
 function sketch (p) {
     let font;
 	let textString;
+	let P = 1250;
 	let floatingPoints = [];
 	let points, bounds;
 
@@ -29,8 +30,30 @@ function sketch (p) {
 		textString = props.text;
 		reset();
 		if(textString) {
-			let denom = textString.length > 1 ? textString.length : 2;
-			generateText(textString, p.width/denom);
+			generateText(textString);
+		}
+	}
+
+	p.windowResized = function() {
+ 		p.resizeCanvas(p.windowWidth, p.windowHeight);
+		adjustPoints();
+		reset();
+		if(textString) {
+			generateText(textString);
+		}
+	}
+
+	function adjustPoints() {
+		let N = (p.width*p.height)/P;
+		if(N < floatingPoints.length) {
+			while(N < floatingPoints.length) {
+				floatingPoints.pop();
+			}
+		}
+		else if (N > floatingPoints.length) {
+			while(N > floatingPoints.length) {
+				floatingPoints.push(makePoint());
+			}
 		}
 	}
 
@@ -38,11 +61,7 @@ function sketch (p) {
 
 		p.createCanvas(p.windowWidth, p.windowHeight);
 
-		let N = (p.width*p.height)/1000;
-		for(let i = 0; i < N; i++) {
-			let newPoint = makePoint();	
-			floatingPoints.push(newPoint);
-		}
+		adjustPoints();
 	}
 	
 	p.draw = function () {
@@ -86,9 +105,12 @@ function sketch (p) {
 	}
 	
 		
-	function generateText(str, size) {
-		points = font.textToPoints(str, p.width/2, p.height/2, size, {sampleFactor:0.1});
-		bounds = font.textBounds(str, p.width/2, p.height/2, size);
+	function generateText(str) {
+		let denom = textString.length > 1 ? textString.length : 2;
+		let size = Math.min(p.width, p.height)/denom;
+		let hFrac = 5.0/12.0;
+		points = font.textToPoints(str, p.width/2, p.height*hFrac, size, {sampleFactor:0.1});
+		bounds = font.textBounds(str, p.width/2, p.height*hFrac, size);
 	}
 	
 	function makePoint() {
