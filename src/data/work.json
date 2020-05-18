@@ -1,0 +1,16 @@
+[
+	{
+		"title": "D&D Wiki",
+		"repo": "github.com/MadhavRKumar/dnd-wiki",
+		"tech": ["React", "PostgreSQL", "Express"], 
+		"description": "",
+		"image": ""
+	},
+	{
+		"title": "Portfolio",
+		"repo": "github.com/MadhavRKumar/portfolio",
+		"tech": ["React", "Gatsby", "Express", "GraphQL"],
+		"description": "",
+		"image": ""
+	}
+]

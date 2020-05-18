@@ -13,6 +13,13 @@ module.exports = {
         path: `${__dirname}/src/art/`,
       },
     },
+	{
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data/`,
+      },
+    },
     `gatsby-transformer-sharp`,
 	`gatsby-transformer-json`,
     `gatsby-plugin-sharp`,
