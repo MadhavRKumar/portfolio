@@ -205,6 +205,7 @@ button[type="submit"]:hover {
 
 a {
   text-decoration: none;
+  color: white;
 }
 
 a:hover {
