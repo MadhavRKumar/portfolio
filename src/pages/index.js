@@ -34,7 +34,7 @@ const IndexPage = () => {
 	    <Link to="/contact">Contact</Link>
 	  </li>
           <li className="work" ref={element => {workRef = element}}>
-            <a>Work</a>
+            <Link to="/work">Work</Link>
           </li>
           <li className="art" ref={element => {artRef = element}}>
             <Link to="/art">Art</Link>
