@@ -73,6 +73,11 @@ h1 {
   line-height: 1.2;
 }
 
+h2 {
+  font-size: 1.5em;
+  color: var(--black);
+}
+
 .body {
   text-align: center;
   font-size: 1.2em;
@@ -108,6 +113,11 @@ h1 {
   position: relative;
 }
 
+.fixed-image-width {
+  min-width:350px;
+  max-width:1000px;
+}
+
 .art-label {
   position: absolute;
   top: 0;
@@ -128,6 +138,21 @@ canvas {
   flex-grow: 1;
   background: var(--black);
   color: #ffffff;
+}
+
+.work {
+  margin: 0 20% 10% 20%;
+  align-items: center;
+}
+
+.work-title {
+  border-bottom: 1px solid var(--black);
+  text-align: center;
+  margin: 0 25% 3% 25%;
+}
+
+.description {
+  margin: 5% 0;
 }
 
 .list {
@@ -208,6 +233,10 @@ a {
   color: white;
 }
 
+h2 > a {
+  color: var(--black);
+}
+
 a:hover {
   text-decoration: underline;
 }
@@ -225,6 +254,11 @@ a:visited {
   .list {
     margin: 10% 20%;
   }
+
+  .work-title {
+	margin: 0 30% 3% 30%; 
+  }
+
 }
 
 @media screen and (min-width: 700px) {
@@ -254,6 +288,10 @@ a:visited {
   .bottom-half {
   }
 
+  .work-title {
+	margin: 0 35% 3% 35%; 
+  }
+
   .list {
     margin: 5% 25%;
   }
@@ -266,6 +304,10 @@ a:visited {
   html {
     font-size: 24px;
   }
+
+  .work {
+     margin: 0 20% 5% 20%;
+  } 
 
   .list {
     margin: 5% 30%;
