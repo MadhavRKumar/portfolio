@@ -8,11 +8,11 @@ import fontPath from '../static/proza-libre-latin-500.woff'
 const Contact = () => {
 	const [text, setText] = useState("");
 
-	return (
+	return (typeof window !== 'undefined') ? (
 		<Layout title="Contact">
 		<Form onChange={setText}/>	
 		<P5Wrapper sketch={sketch} text={text}/>
-		</Layout>)
+		</Layout>) : (<div></div>);
 }
 
 function sketch (p) {
