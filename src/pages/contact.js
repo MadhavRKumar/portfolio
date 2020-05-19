@@ -12,7 +12,7 @@ const Contact = () => {
 		<Layout title="Contact">
 		<Form onChange={setText}/>	
 		<P5Wrapper sketch={sketch} text={text}/>
-		</Layout>) : (<div></div>);
+		</Layout>) : null;
 }
 
 function sketch (p) {
