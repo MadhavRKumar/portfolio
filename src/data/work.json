@@ -7,6 +7,13 @@
 		"image": "./images/redorath.png"
 	},
 	{
+		"title": "Metal Logo Scraper",
+		"repo": "https://www.github.com/MadhavRkumar/metal-logo",
+		"tech": ["Selenium"],
+		"description": "A Selenium based script that scrapes Brutal Death Metal logos",
+		"image": "./images/metal-logo.jpg"
+	},
+	{
 		"title": "Portfolio",
 		"repo": "https://www.github.com/MadhavRKumar/portfolio",
 		"tech": ["React", "Gatsby", "Express", "GraphQL"],

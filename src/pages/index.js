@@ -25,7 +25,7 @@ const IndexPage = () => {
 		<header>
         <h1 className="name" ref={element => {nameRef = element}}>Madhav Kumar</h1>
         <p className="body" ref={element => {descRef = element}}>
-          I'm a web developer and generative artist.
+          WEB DEVELOPER AND GENERATIVE ARTIST
         </p>
       </header>
       <div className="bottom-half" ref={element => {bottomRef = element}}>
