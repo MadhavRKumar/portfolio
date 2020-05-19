@@ -56,7 +56,7 @@ html {
   height: 100%;
   font-size: 16px;
   overflow-x: hidden;
-  font-family: 'Proza Libre', sans-serif;
+  font-family: 'Work Sans', sans-serif;
 }
 
 #___gatsby, #gatsby-focus-wrapper, body,main {
@@ -74,7 +74,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: var(--black);
 }
 
@@ -148,11 +148,17 @@ canvas {
 .work-title {
   border-bottom: 1px solid var(--black);
   text-align: center;
-  margin: 0 25% 3% 25%;
+  margin: 0 8% 3% 8%;
+  padding: 0 0 2% 0;
+  text-transform: uppercase;
+  font-family: 'Work Sans';
+  font-weight: 500;
+  letter-spacing: 1.5px;
 }
 
 .description {
   margin: 5% 0;
+  text-align: center;
 }
 
 .list {
@@ -254,11 +260,6 @@ a:visited {
   .list {
     margin: 10% 20%;
   }
-
-  .work-title {
-	margin: 0 30% 3% 30%; 
-  }
-
 }
 
 @media screen and (min-width: 700px) {
@@ -286,10 +287,6 @@ a:visited {
   }
 
   .bottom-half {
-  }
-
-  .work-title {
-	margin: 0 35% 3% 35%; 
   }
 
   .list {

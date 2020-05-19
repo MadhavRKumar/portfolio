@@ -6,7 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@openfonts/cormorant-garamond_latin": "^1.44.1",
-    "@openfonts/proza-libre_latin": "^1.44.1",
+    "@openfonts/work-sans_latin": "^1.0.1",
     "gatsby": "^2.20.12",
     "gatsby-image": "^2.3.1",
     "gatsby-plugin-manifest": "^2.3.3",

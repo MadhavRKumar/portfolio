@@ -42,7 +42,7 @@ export default Work;
 const Entry = ({node,node:{title, repo, tech, description, image}}) => {
 	return (
 		<div className="work">
-			<h2 className="work-title"><a href={repo}>{title}</a></h2>
+			<h2 className="work-title uppercase"><a href={repo}>{title}</a></h2>
 			<Image fluid={image.childImageSharp.fluid}/>
 			<p className="description">{description}</p>
 		</div>
