@@ -26,7 +26,7 @@ export const query = graphql`
 const Work = ({data}) => {
 	return ( 
 		<Layout title="Work">
-			<h1>Work</h1>
+			<h1 className="work-header">Work</h1>
 			<div className="flex-wrapper">
 				{data.allWorkJson.edges.map(work => { 
 					return <Entry node={work.node}/>	

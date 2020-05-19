@@ -68,7 +68,7 @@ h1 {
   font-size: 4em;
   color: var(--black);
   text-align: center;
-  margin: 15% auto;
+  margin: 15% auto 0 auto;
   font-weight: bold;
   line-height: 1.2;
 }
@@ -78,11 +78,14 @@ h2 {
   color: var(--black);
 }
 
+.work-header {
+  margin: 15% auto 15% auto;
+}
+
 .body {
   text-align: center;
-  font-size: 1.2em;
-  line-height: 1.5;
-  margin: 15% auto;
+  font-size: 0.9em;
+  margin: 0.5% auto 15% auto;
 }
 
 .flex {
@@ -277,18 +280,19 @@ a:visited {
   html {
     font-size: 20px;
   }
-
-  h1 {
-    margin: 5% auto;
-  }
   
+  h1 {
+    margin: 5% auto 0 auto;
+  }
+
   .body {
-    margin: 5% auto;
+    margin: 0 auto 10% auto;
   }
 
-  .bottom-half {
-  }
-
+  .work-header {
+    margin: 10% auto;
+   }
+  
   .list {
     margin: 5% 25%;
   }
