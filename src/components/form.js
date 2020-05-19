@@ -8,7 +8,8 @@ const Form = ({onChange}) => {
 	}
 
 	return (
-		<form className="flex-wrapper contact" method="post" action="#">
+		<form className="flex-wrapper contact" method="post" name="contact" data-netlify="true" data-netlify-honeypot="bot-field">
+			<input type="hidden" name="form-name" value="contact"/>
 			<label htmlFor="name">Name</label>
 			<input type="text" name="name" id="name" />
 			<label htmlFor="email">Email</label>
