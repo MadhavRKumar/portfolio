@@ -29,7 +29,7 @@ const Work = ({data}) => {
 			<h1 className="work-header">Work</h1>
 			<div className="flex-wrapper">
 				{data.allWorkJson.edges.map(work => { 
-					return <Entry node={work.node}/>	
+					return <Entry node={work.node} key={work.node.title}/>	
 				})}
 			</div>		
 		</Layout>
