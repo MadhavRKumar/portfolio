@@ -249,20 +249,25 @@ button[type="submit"]:hover {
 
 a {
   text-decoration: none;
-  color: pink;
+  color: #04607C;
 }
 
-h2 > a {
-  color: var(--black);
+a:visited {
+  color: #04607C;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
-a:visited {
+.bottom-half a {
   color: pink;
 }
+
+.bottom-half a:visited {
+  color: pink;
+}
+
 
 .link {
   font-weight:bold;
