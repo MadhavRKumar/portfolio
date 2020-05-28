@@ -2,29 +2,32 @@
 	{
 		"title": "D&D Wiki",
 		"repo": "https://www.github.com/MadhavRKumar/dnd-wiki",
-		"tech": ["React", "PostgreSQL", "Express"], 
-		"description": "A wiki for our D&D Campaign",
-		"image": "./images/redorath.png"
+		"tech": ["PostgreSQL", "Express", "React", "Node.js"], 
+		"description": "A wiki for our D&D Campaign.",
+		"image": "./images/redorath.png",
+		"url": "https://www.redorath.com" 
 	},
 	{
 		"title": "Three.js Ruibk's Cube",
 		"repo": "https://www.github.com/MadhavRKumar/cube",
 		"tech": ["three.js", "webpack", "Babel"],
-		"description": "A Rubik's Cube built with three.js",
-		"image": "./images/cube.png"
+		"description": "A Rubik's Cube built with three.js.",
+		"image": "./images/cube.png",
+		"url": "https://www.rubiks-cube.netlify.app"
 	},
 	{
 		"title": "Metal Logo Scraper",
 		"repo": "https://www.github.com/MadhavRkumar/metal-logo",
-		"tech": ["Selenium"],
-		"description": "A Selenium based script that scrapes Brutal Death Metal logos",
-		"image": "./images/metal-logo.jpg"
+		"tech": ["Selenium", "Node.js"],
+		"description": "A Selenium based script that scrapes Brutal Death Metal logos.",
+		"image": "./images/metal-logo.jpg" 
 	},
 	{
 		"title": "Portfolio",
 		"repo": "https://www.github.com/MadhavRKumar/portfolio",
 		"tech": ["React", "Gatsby", "Express", "GraphQL"],
-		"description": "My portfolio",
-		"image": "./images/portfolio.png"
+		"description": "My portfolio.",
+		"image": "./images/portfolio.png",
+		"url": "https://www.madhavrkumar.com" 
 	}
 ]
