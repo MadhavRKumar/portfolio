@@ -11,6 +11,8 @@ export const query = graphql`
 				title
 				repo
 				description
+				tech
+				url
 				image {
 					childImageSharp {
 						fluid(maxWidth:1000) {
@@ -39,12 +41,25 @@ const Work = ({data}) => {
 export default Work;
 
 
-const Entry = ({node,node:{title, repo, tech, description, image}}) => {
+const Entry = ({node:{title, repo, tech, description, image, url}}) => {
 	return (
 		<div className="work">
-			<h2 className="work-title uppercase"><a href={repo}>{title}</a></h2>
+			<h2 className="work-title uppercase">{title}</h2>
 			<Image fluid={image.childImageSharp.fluid}/>
-			<p className="description">{description}</p>
+			<Description tech={tech} description={description} url={url} repo={repo}/>
 		</div>
 	)
+}
+
+const Description = ({tech, description, url, repo}) => {
+	const techString = tech.join(', ');
+	const website = url ? (<p className="work-link"><a href={url}>Website</a></p>) : null;
+	const source = (<p className="work-link"><a href={repo}>Source</a></p>) 
+	return (
+		<>
+		<p className="description">{description} Technology: <strong>{techString}.</strong></p>
+		{website}
+		{source}
+		</>
+	);
 }
