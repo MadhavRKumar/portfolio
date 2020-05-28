@@ -13,7 +13,7 @@
 		"tech": ["three.js", "webpack", "Babel"],
 		"description": "A Rubik's Cube built with three.js.",
 		"image": "./images/cube.png",
-		"url": "https://www.rubiks-cube.netlify.app"
+		"url": "https://rubiks-cube.netlify.app"
 	},
 	{
 		"title": "Metal Logo Scraper",
