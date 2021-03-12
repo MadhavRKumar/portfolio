@@ -9,18 +9,18 @@ const Form = ({onChange}) => {
 
 	return (
 		<form className="flex-wrapper contact" method="post" name="contact" data-netlify="true" data-netlify-honeypot="bot-field">
-			<input type="hidden" name="form-name" value="contact"/>
-			<label htmlFor="name">Name</label>
+			<input class="outline" type="hidden" name="form-name" value="contact"/>
+			<label class="outline" htmlFor="name">Name</label>
 			<input type="text" name="name" id="name" />
-			<label htmlFor="email">Email</label>
-			<input type="email" name="email" id="email" />
+			<label class="outline" htmlFor="email">Email</label>
+			<input  type="email" name="email" id="email" />
 			<fieldset className="flex-wrapper">
-				<legend>Subject</legend>
-				<label htmlFor="work"><input onChange={handleChange} type="radio" name="subject" id="work" value="WORK"/>Work</label>	
-				<label htmlFor="art"><input onChange={handleChange} type="radio" name="subject" id="art" value="ART"/>Art</label>	
-				<label htmlFor="other"><input onChange={handleChange} type="radio" name="subject" id="other" value="?"/>Other</label>	
+				<legend class="outline">Subject</legend>
+				<label class="outline" htmlFor="work"><input onChange={handleChange} type="radio" name="subject" id="work" value="WORK"/>Work</label>	
+				<label class="outline" htmlFor="art"><input onChange={handleChange} type="radio" name="subject" id="art" value="ART"/>Art</label>	
+				<label class="outline" htmlFor="other"><input onChange={handleChange} type="radio" name="subject" id="other" value="?"/>Other</label>	
 			</fieldset>
-			<label htmlFor="message">Message</label>
+			<label class="outline" htmlFor="message">Message</label>
 			<textarea name="message" id="message" rows="5" />
 			<button type="submit">Send</button>
 		</form>

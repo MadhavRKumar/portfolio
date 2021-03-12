@@ -49,6 +49,7 @@ table {
 /*  End of reset */
 :root {
   --black: #383838;
+  --whiteish: #f8f8f8;
 }
 
 
@@ -200,16 +201,21 @@ canvas {
   margin: 10% 20%;
 }
 
-label {
-  background: rgb(255, 255, 255);
-  background: linear-gradient(90deg, rgba(255,255,255,1) 10%, rgba(255,255,255,0) 35%); 
-  padding: 1% 0;
-}
-
-legend {
-  background: rgb(255, 255, 255);
-  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255, 0.75) 100%); 
-  padding: 1% 0;
+.outline {
+	text-shadow: 0 0 1px var(--whiteish), 0 0 10px var(--whiteish), 
+				 1px 1px 1px var(--whiteish), 1px -1px 1px var(--whiteish),
+			     -1px 1px 1px var(--whiteish), -1px -1px 1px var(--whiteish),
+				 2px 2px 1px var(--whiteish), 2px -2px 1px var(--whiteish),
+			     -2px 2px 1px var(--whiteish), -2px -2px 1px var(--whiteish),
+				 3px 3px 1px var(--whiteish), 3px -3px 1px var(--whiteish),
+			     -3px 3px 1px var(--whiteish), -3px -3px 1px var(--whiteish), 
+				 4px 4px 1px var(--whiteish), 4px -4px 1px var(--whiteish),
+			     -4px 4px 1px var(--whiteish), -4px -4px 1px var(--whiteish), 
+				 5px 5px 1px var(--whiteish), 5px -5px 1px var(--whiteish),
+			     -5px 5px 1px var(--whiteish), -5px -5px 1px var(--whiteish), 
+				 6px 6px 1px var(--whiteish), 6px -6px 1px var(--whiteish),
+			     -6px 6px 1px var(--whiteish), -6px -6px 1px var(--whiteish); 
+				 
 }
 
 legend {
