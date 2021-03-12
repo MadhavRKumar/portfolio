@@ -16,6 +16,14 @@
 		"url": "https://rubiks-cube.netlify.app"
 	},
 	{
+		"title": "Asemic Writing",
+		"repo": "https://www.github.com/MadhavRKumar/asemic",
+		"tech": ["three.js", "tone.js"],
+		"description": "A study in interactively generating asemic writing.",
+		"image": "./images/asemic.png",
+		"url": "https://asemic.netlify.app"
+	},
+	{
 		"title": "Metal Logo Scraper",
 		"repo": "https://www.github.com/MadhavRkumar/metal-logo",
 		"tech": ["Selenium", "Node.js"],
