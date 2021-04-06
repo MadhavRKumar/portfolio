@@ -1,11 +1,11 @@
 [
 	{
-		"title": "D&D Wiki",
-		"repo": "https://www.github.com/MadhavRKumar/dnd-wiki",
-		"tech": ["PostgreSQL", "Express", "React", "Node.js"], 
-		"description": "A wiki for our D&D Campaign.",
-		"image": "./images/redorath.png",
-		"url": "https://www.redorath.com" 
+		"title": "Asemic Writing",
+		"repo": "https://www.github.com/MadhavRKumar/asemic",
+		"tech": ["three.js", "tone.js"],
+		"description": "A study in interactively generating asemic writing.",
+		"image": "./images/asemic.png",
+		"url": "https://asemic.netlify.app"
 	},
 	{
 		"title": "Three.js Ruibk's Cube",
@@ -16,12 +16,12 @@
 		"url": "https://rubiks-cube.netlify.app"
 	},
 	{
-		"title": "Asemic Writing",
-		"repo": "https://www.github.com/MadhavRKumar/asemic",
-		"tech": ["three.js", "tone.js"],
-		"description": "A study in interactively generating asemic writing.",
-		"image": "./images/asemic.png",
-		"url": "https://asemic.netlify.app"
+		"title": "D&D Wiki",
+		"repo": "https://www.github.com/MadhavRKumar/dnd-wiki",
+		"tech": ["PostgreSQL", "Express", "React", "Node.js"], 
+		"description": "A wiki for our D&D Campaign.",
+		"image": "./images/redorath.png",
+		"url": "https://www.redorath.com" 
 	},
 	{
 		"title": "Metal Logo Scraper",
