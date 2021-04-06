@@ -228,7 +228,11 @@ fieldset > label {
 	margin: 0;
 }
 
-.input-field{
+.message-label {
+	margin: 2% 0 1% 0;
+}
+
+.input-field {
 	margin: 1% 0 5% 0;
 	height: 2em;
 }

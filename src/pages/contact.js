@@ -44,7 +44,8 @@ function sketch (p) {
 	}
 
 	function adjustPoints() {
-		let N = (p.width*p.height)/P;
+		let N = Math.min((p.width*p.height)/P, 1500);
+
 		if(N < floatingPoints.length) {
 			while(N < floatingPoints.length) {
 				floatingPoints.pop();
