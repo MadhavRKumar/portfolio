@@ -139,7 +139,7 @@ html,
 body {
 	height: 100%;
 	font-family: "IBM Plex Mono", monospace;
-	font-size: 18px;
+	font-size: 20px;
 	background: var(--main-bg);
 	color: var(--font-color);
 }
@@ -148,7 +148,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	padding: 6vmax 6vmax;
-	font-size: 1.25rem;
+	font-size: 1.33rem;
 }
 
 .nav__title {
