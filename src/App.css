@@ -132,7 +132,7 @@ table {
 /* END RESET */
 :root {
 	--main-bg: #0d0d0f;
-	--font-color: #d0d0d0;
+	--font-color: #dfdfdf;
 }
 
 html,
@@ -142,6 +142,8 @@ body {
 	font-size: 20px;
 	background: var(--main-bg);
 	color: var(--font-color);
+	position: relative;
+	z-index: 0;
 }
 
 .nav {
@@ -149,6 +151,8 @@ body {
 	flex-direction: column;
 	padding: 6vmax 6vmax;
 	font-size: 1.33rem;
+	position: relative;
+	z-index: 20;
 }
 
 .nav__title {
@@ -165,6 +169,7 @@ body {
 }
 
 .nav__list-item__link {
+	width: 100%;
 	display: inline-block;
 	padding: 0.5rem;
 	color: var(--font-color);
