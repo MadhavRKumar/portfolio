@@ -32,7 +32,7 @@ const WaveMaterial = shaderMaterial(
 
 		float rand (in vec2 st) {
 			return fract(sin(dot(st.xy,
-								 vec2(12.9898,78.233)))
+								 vec2(seed*12.18,seed*60.45)))
 						 * 43758.5453123);
 		}
 		
@@ -71,14 +71,14 @@ const WaveMaterial = shaderMaterial(
 
 		void main() {
 			// Properties
-			const int octaves = 8;
+			const int octaves = 5;
 			float lacunarity = 2.0;
 			float gain = 0.3;
 			//
 			// Initial values
 			float amplitude = 0.5;
-			float frequency = 2.;
-			float y = -0.0;
+			float frequency = 2.1;
+			float y = -0.1;
 			//
 			// Loop of octaves
 			for (int i = 0; i < octaves; i++) {
@@ -87,15 +87,17 @@ const WaveMaterial = shaderMaterial(
 				amplitude *= gain;
 			}
 
-			vec2 pos = vec2(vUv*3.);
-			pos.x += (time/3.);
+			vec2 pos = vec2(vUv*6.);
+			pos.x += (time/2.);
 			pos.y -= (time*1.);
-			float n = 1. - smoothstep(0.5, 0.9, noise(pos));
+
+			float grain =rand(vUv+time/2.)/40.;
+
+			float n = smoothstep(0.6, 0.75+grain, vUv.y + noise(pos) );
 			
-			float pct = mix(0., 1., y*n);
-			float col = smoothstep(0.59, 0.6, (pct + vUv.y) );
+			float col = smoothstep(0.35, 0.5+grain, (y + vUv.y) );
 	
-			gl_FragColor = vec4(mix(waveColor, bgColor, col), 1.0);
+			gl_FragColor = vec4(mix(waveColor, bgColor, col*n), 1.0);
 		}
 	`
 );
