@@ -8,6 +8,7 @@ const WaveMaterial = shaderMaterial(
 		waveColor: new THREE.Color(),
 		time: 0.0,
 		seed: 0.0,
+		mouse: new THREE.Vector2(),
 	},
 	// vertex shader
 	`
@@ -24,6 +25,7 @@ const WaveMaterial = shaderMaterial(
 		uniform vec3 waveColor;
 		uniform float time;
 		uniform float seed;
+		uniform vec2 mouse;
 
 		float rand (float x) {
 			return fract(sin(x * seed*10.)*
@@ -70,15 +72,17 @@ const WaveMaterial = shaderMaterial(
 		}
 
 		void main() {
+			vec2 normMouse = (mouse + 1.) / 2.;
+
 			// Properties
 			const int octaves = 5;
 			float lacunarity = 2.0;
-			float gain = 0.3;
+			float gain = mix(0.1, 0.5, normMouse.x);
 			//
 			// Initial values
 			float amplitude = 0.5;
 			float frequency = 2.1;
-			float y = -0.1;
+			float y = -0.2;
 			//
 			// Loop of octaves
 			for (int i = 0; i < octaves; i++) {
@@ -91,11 +95,11 @@ const WaveMaterial = shaderMaterial(
 			pos.x += (time/2.);
 			pos.y -= (time*1.);
 
-			float grain =rand(vUv+time/2.)/40.;
+			float grain =rand(vUv+time/2.)/mix(5., 100., normMouse.y);
 
-			float n = smoothstep(0.6, 0.75+grain, vUv.y + noise(pos) );
+			float n = smoothstep(0.65, 0.75+grain, y + vUv.y + noise(pos) );
 			
-			float col = smoothstep(0.35, 0.5+grain, (y + vUv.y) );
+			float col = smoothstep(0.45, 0.5+grain, (y + vUv.y) );
 	
 			gl_FragColor = vec4(mix(waveColor, bgColor, col*n), 1.0);
 		}

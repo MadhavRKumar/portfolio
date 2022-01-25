@@ -10,6 +10,7 @@ function Background() {
 	const seed = Math.random();
 	useFrame((state) => {
 		shader.current.uniforms.time.value = state.clock.getElapsedTime();
+		shader.current.uniforms.mouse.value = state.mouse;
 	});
 	return (
 		<mesh>
