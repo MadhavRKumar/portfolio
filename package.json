@@ -7,7 +7,7 @@
   "dependencies": {
     "@openfonts/cormorant-garamond_latin": "^1.44.1",
     "@openfonts/work-sans_latin": "^1.0.1",
-    "gatsby": "^2.20.29",
+    "gatsby": "^4.25.7",
     "gatsby-cli": "^2.12.24",
     "gatsby-image": "^2.3.1",
     "gatsby-plugin-manifest": "^2.3.3",
