@@ -1,8 +1,12 @@
 +++
 title = "About"
 author = "Madhav Kumar"
-description = "Example posts demonstrating hugo's markup features"
 date = 2025-02-11
 +++
 
-About Something
+Madhav Kumar is a collection of properties. Currently, those properties are: 
+
+ - Software Engineer
+ - Big ol' nerd
+ - Serial project starter
+ - Occasional project finisher
