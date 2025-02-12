@@ -1,8 +1,21 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = 'risotto'
+
+title = 'Madhav Kumar'
+author = 'Madhav Kumar'
+theme = 'smol'
+
+sectionPagesMenu = "main"
 
 
-[params.theme]
-palette = "catppuccin-macchiato"
+[params]
+    subtitle = "???"
+    dateFmt = "02.01.2006"
+
+[menu]
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about"
+    weight = 10
