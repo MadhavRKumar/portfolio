@@ -10,7 +10,7 @@ sectionPagesMenu = "main"
 
 [params]
     subtitle = "???"
-    dateFmt = "02.01.2006"
+    dateFmt = "2006-01-01"
 
 [menu]
 
