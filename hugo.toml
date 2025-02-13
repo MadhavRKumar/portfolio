@@ -20,5 +20,18 @@ sectionPagesMenu = "main"
     url = "/about"
     weight = 10
 
-[security]
-  enableInlineShortcodes = true
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    hl_inline = false
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = 'catppuccin-mocha'
+    tabWidth = 4
+    wrapperClass = 'highlight'
