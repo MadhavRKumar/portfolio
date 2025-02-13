@@ -5,11 +5,12 @@ title = 'Madhav Kumar'
 author = 'Madhav Kumar'
 theme = 'smol-dark'
 
+sectionPagesMenu = "main"
 
 
 [params]
     subtitle = "???"
-    dateFmt = "2006-01-01"
+    dateFmt = "2006-01-02"
 
 [menu]
 
@@ -17,3 +18,7 @@ theme = 'smol-dark'
     identifier = "about"
     name = "About"
     url = "/about"
+    weight = 10
+
+[security]
+  enableInlineShortcodes = true
