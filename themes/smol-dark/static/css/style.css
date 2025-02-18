@@ -87,9 +87,6 @@ html {overflow-y: scroll; }
     --bgcolor: var(--ctp-latte-base); 
     --fontcolor: var(--ctp-latte-text);
     --linkcolor: var(--ctp-latte-blue); 
-    --visitedcolor: var(--ctp-latte-blue); 
-    --precolor: #fff;
-    --prebgcolor: #000; 
     --decoration-color: var(--ctp-latte-rosewater);
     --article-bg: var(--ctp-latte-mantle);
 }
@@ -97,11 +94,8 @@ html {overflow-y: scroll; }
     :root { 
         --bgcolor: var(--ctp-mocha-base); 
         --fontcolor: var(--ctp-mocha-text);
-        --linkcolor: var(--ctp-mocha-text);
-        --visitedcolor: var(--ctp-mocha-text);
-        --precolor: var(--ctp-mocha-subtext0);
-        --prebgcolor: var(--ctp-mocha-mantle);
-        --decoration-color: var(--ctp-mocha-rosewater);
+        --linkcolor: var(--ctp-mocha-blue);
+        --decoration-color: var(--ctp-mocha-red);
         --article-bg: var(--ctp-mocha-mantle);
     }
 }
@@ -114,10 +108,8 @@ body{
     background: var(--bgcolor)
 }
 h1,h2,h3{line-height:1.2}
-p > code{padding:2px}
-code{padding:2px}
 pre{
-    padding:24px;
+    padding: 12px;
     overflow-x: auto;
 }
 article{background: var(--article-bg);
@@ -145,7 +137,26 @@ a {
     text-decoration-thickness: 2px;
     text-underline-offset: 2px;
     text-decoration-line: underline;
+    font-weight: bold;
+}
+a:hover{
+    text-decoration-thickness: 4px;
 }
 a:link{color: var(--linkcolor)}
-a:visited{color: var(--visitedcolor)}
-a:active{color: var(--visitedcolor)}
+a:visited{color: var(--linkcolor)}
+blockquote{
+  border: 2px solid var(--decoration-color);
+  padding: 2px 0 2px 20px;
+  margin: 0;
+  font-style: italic;
+}
+hr{
+  border: 0;
+  height: 1px;
+  background-color: var(--decoration-color);
+}
+p > code {
+    background: var(--bgcolor);
+    font-weight: bold;
+    padding: 5px;
+}
