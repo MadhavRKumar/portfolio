@@ -140,7 +140,7 @@ a {
     font-weight: bold;
 }
 a:hover{
-    text-decoration-thickness: 4px;
+    text-decoration-thickness: 3px;
 }
 a:link{color: var(--linkcolor)}
 a:visited{color: var(--linkcolor)}
