@@ -29,6 +29,18 @@ theme = 'smol-dark'
     url = "/art"
     weight = 30
 
+  [[menu.footer]]
+    name = "GitHub"
+    url = "https://github.com/MadhavRKumar"
+    weight = 1
+
+  [[menu.footer]]
+    name = "LinkedIn"
+    url = "https://www.linkedin.com/in/madhav-ramesh-kumar/"
+    weight = 2
+
+
+
 [markup]
   [markup.highlight]
     anchorLineNos = false
@@ -43,3 +55,5 @@ theme = 'smol-dark'
     noClasses = false
     tabWidth = 4
     wrapperClass = 'highlight'
+
+
