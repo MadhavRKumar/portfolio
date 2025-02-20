@@ -5,20 +5,29 @@ title = 'Madhav Kumar'
 author = 'Madhav Kumar'
 theme = 'smol-dark'
 
-sectionPagesMenu = "main"
-
 
 [params]
     subtitle = "???"
     dateFmt = "2006-01-02"
 
 [menu]
-
   [[menu.main]]
     identifier = "about"
     name = "About"
     url = "/about"
     weight = 10
+
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/post"
+    weight = 20
+
+  [[menu.main]]
+    identifier = "art"
+    name = "Art"
+    url = "/art"
+    weight = 30
 
 [markup]
   [markup.highlight]
