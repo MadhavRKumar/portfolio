@@ -1,6 +1,6 @@
 {{ define "main" }}
 	<main>
-		{{ $listtitle := .Title }}
+        <article>
 		{{ if or .Title .Content }}
 		<div>
 			{{ with .Title }}<h1>{{ . }}</h1>{{ end }}
@@ -9,16 +9,12 @@
 		{{ end }}
 		
 		<ul>
-
-		<ul>
                 {{ range .Resources.ByType "image" }}
 		    <li>
-		        <div class="post-title">
-                    <a href="{{ .RelPermalink }}">{{.Title }}</a>
-		        </div>
+                <a href="{{ .RelPermalink }}">{{.Title }}</a>
 		    </li>
 		    {{ end }}
 		</ul>
-	</main>
+        </article>
 	</main>
 {{ end }}
