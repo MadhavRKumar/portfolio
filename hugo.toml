@@ -20,7 +20,7 @@ theme = 'smol-dark'
   [[menu.main]]
     identifier = "posts"
     name = "Posts"
-    url = "/post"
+    url = "/posts"
     weight = 20
 
   [[menu.main]]
