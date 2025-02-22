@@ -6,7 +6,7 @@
 			<b><time>{{ .Date.Format (default "2006-01-02 15:04:05" .Site.Params.dateFmt) }}</time></b>
             {{ end }}
 
-			<div>
+			<div class="post">
 				{{ .Content }}
 			</div>
        {{ range .Params.tags }}
