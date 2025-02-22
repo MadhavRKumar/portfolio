@@ -98,6 +98,7 @@ html {overflow-y: scroll; }
     --linkcolor: var(--ctp-latte-blue); 
     --decoration-color: var(--ctp-latte-rosewater);
     --article-bg: var(--ctp-latte-mantle);
+    --selection-color: var(--ctp-latte-blue);
 }
 @media (prefers-color-scheme: dark) { 
     :root { 
@@ -106,6 +107,7 @@ html {overflow-y: scroll; }
         --linkcolor: var(--ctp-mocha-blue);
         --decoration-color: var(--ctp-mocha-red);
         --article-bg: var(--ctp-mocha-mantle);
+        --selection-color: var(--ctp-mocha-blue);
     }
 }
 body{
@@ -168,4 +170,8 @@ p > code {
     background: var(--bgcolor);
     font-weight: bold;
     padding: 5px;
+}
+
+::selection {
+    background-color: color-mix(in srgb, var(--selection-color), transparent 70%);
 }
