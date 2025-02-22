@@ -7,7 +7,6 @@ theme = 'smol-dark'
 
 
 [params]
-    subtitle = "???"
     dateFmt = "2006-01-02"
 
 [menu]
@@ -43,9 +42,6 @@ theme = 'smol-dark'
     name = "LinkedIn"
     url = "https://www.linkedin.com/in/madhav-ramesh-kumar/"
     weight = 30
-
-
-
 
 [markup]
   [markup.highlight]
