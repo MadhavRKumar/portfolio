@@ -1,0 +1,15 @@
+{{ define "main" }}
+	<main>
+		{{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+        {{ if eq $paginator.TotalPages 0 }}
+            <article>
+            {{ partial "empty.html" . }}
+            </article>
+        {{ else }}
+		{{ range $paginator.Pages }}
+			{{ .Render "summary" }}
+		{{ end }}
+        {{ end }}
+		{{ partial "pagination.html" . }}
+	</main>
+{{ end }}

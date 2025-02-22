@@ -1,0 +1,20 @@
+{{ define "main" }}
+	<main>
+        <article>
+		{{ if or .Title .Content }}
+		<div>
+			{{ with .Title }}<h1>{{ . }}</h1>{{ end }}
+			{{ with .Content }}<div>{{ . }}</div>{{ end }}
+		</div>
+		{{ end }}
+		
+		<ul>
+                {{ range .Resources.ByType "image" }}
+		    <li>
+                <a href="{{ .RelPermalink }}">{{.Title }}</a>
+		    </li>
+		    {{ end }}
+		</ul>
+        </article>
+	</main>
+{{ end }}

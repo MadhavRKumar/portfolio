@@ -1,7 +1,5 @@
-# My portfolio
-This is the source code for my new portfolio website.
+# Madhav Kumar's Personal Website
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1b84da77-0692-40d6-8e44-507719697541/deploy-status)](https://app.netlify.com/sites/madhavrkumar/deploys)
 
-## Technology
-* [Gatsby](https://www.gatsbyjs.org/)
-* [Netlify](https://www.netlify.com/)
-* [p5.js](https://p5js.org/)
+Built using [Hugo](https://gohugo.io/). Theme is [smol-cat](/themes/smol-cat), 
+my fork of [smol](https://github.com/colorchestra/smol) styled with [catppuccin](https://catppuccin.com/).

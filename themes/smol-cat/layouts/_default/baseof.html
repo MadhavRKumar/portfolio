@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en-us" }}">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<style type=text/css>body{font-family:monospace;}</style>
+	<title>{{ .Title }}</title>
+	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+	<link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+	{{ range .Site.Params.customCSS -}}
+		<link rel="stylesheet" href="{{ . | relURL }}?rnd={{ now.Unix }}">
+	{{- end }}
+	{{ with .OutputFormats.Get "RSS" -}}
+		{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
+	{{- end }}
+    <style type="text/css" media="screen">
+    @media (prefers-color-scheme: dark) { 
+      {{ partial "css/syntax-dark.css" . | safeCSS }}
+    }
+    @media (prefers-color-scheme: light) { 
+      {{ partial "css/syntax-light.css" . | safeCSS }} 
+    }
+    </style>
+
+    <link rel="icon" href="/favicon.ico" sizes="48x48" ><!-- REVISED (Aug 11, 2023)! -->
+    <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml"><!-- REVISED (Aug 11, 2023)! -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+    <link rel="manifest" href="/site.webmanifest" />
+</head>
+<body>
+	{{ partial "header" . }}
+	{{ block "main" . }}{{ end }}
+	{{ partial "footer" . }}
+</body>
+</html>
