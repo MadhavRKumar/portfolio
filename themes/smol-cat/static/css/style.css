@@ -95,8 +95,8 @@ html {overflow-y: scroll; }
 :root { 
     --bgcolor: var(--ctp-latte-base); 
     --fontcolor: var(--ctp-latte-text);
-    --linkcolor: var(--ctp-latte-blue); 
-    --decoration-color: var(--ctp-latte-rosewater);
+    --linkcolor: var(--ctp-latte-mauve); 
+    --decoration-color: var(--ctp-latte-peach);
     --article-bg: var(--ctp-latte-mantle);
     --selection-color: var(--ctp-latte-blue);
 }
