@@ -118,7 +118,6 @@ body{
     color:var(--fontcolor);
     background: var(--bgcolor)
 }
-h1,h2,h3{line-height:1.2}
 pre{
     padding: 12px;
     overflow-x: auto;
@@ -166,7 +165,7 @@ hr{
   height: 1px;
   background-color: var(--decoration-color);
 }
-p > code {
+p > code, li > code {
     background: var(--bgcolor);
     font-weight: bold;
     padding: 5px;
@@ -180,3 +179,6 @@ p > code {
     font-size: 0.75rem;
 }
 
+.footnote-ref {
+    padding-left: 0.25ch;
+}
