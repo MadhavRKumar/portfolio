@@ -6,15 +6,19 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<style type=text/css>body{font-family:monospace;}</style>
 	<title>{{ .Title }}</title>
+
 	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
 	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
-	<link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
-	{{ range .Site.Params.customCSS -}}
-		<link rel="stylesheet" href="{{ . | relURL }}?rnd={{ now.Unix }}">
-	{{- end }}
+
+    <!-- CSS -->
+    {{ with resources.Get "css/style.css" }}
+        <style type="text/css">{{ .Content | safeCSS }}</style>
+    {{ end }}
+
 	{{ with .OutputFormats.Get "RSS" -}}
 		{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
 	{{- end }}
+
     <style type="text/css" media="screen">
     @media (prefers-color-scheme: dark) { 
       {{ partial "css/syntax-dark.css" . | safeCSS }}
