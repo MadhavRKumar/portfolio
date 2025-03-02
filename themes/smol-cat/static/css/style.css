@@ -184,8 +184,7 @@ p > code, li > code {
 }
 
 #TableOfContents {
-    border: 1px solid var(--decoration-color);
-    padding: 12px;
+    padding: 6px 12px;
 }
 
 .header-anchor {
