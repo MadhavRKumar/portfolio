@@ -182,3 +182,8 @@ p > code, li > code {
 .footnote-ref {
     padding-left: 0.25ch;
 }
+
+#TableOfContents {
+    border: 1px solid var(--decoration-color);
+    padding: 12px;
+}
