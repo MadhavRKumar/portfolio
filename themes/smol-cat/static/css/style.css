@@ -187,3 +187,7 @@ p > code, li > code {
     border: 1px solid var(--decoration-color);
     padding: 12px;
 }
+
+.header-anchor {
+    padding-left: 0.25ch;
+}
