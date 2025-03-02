@@ -190,3 +190,8 @@ p > code, li > code {
 .header-anchor {
     padding-left: 0.25ch;
 }
+
+.highlight div,
+.highlight pre {
+  overflow-x: auto;
+}
