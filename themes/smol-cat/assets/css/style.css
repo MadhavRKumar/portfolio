@@ -4,8 +4,15 @@ article h1 { font-size: 2rem }
 article h2 { font-size: 1.5rem }
 aside h1 { font-size: 2.5rem }
 
-.post h1 { font-size: 1.5rem}
-.post h2 { font-size: 1.25rem}
+.post h1 { font-size: 1.5rem }
+.post h2 { font-size: 1.25rem }
+
+.post  {
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: 2em;
+        margin-bottom: 1em;
+    }
+}
 
 html {overflow-y: scroll; }
 :root {
@@ -156,7 +163,7 @@ a:link{color: var(--linkcolor)}
 a:visited{color: var(--linkcolor)}
 blockquote{
   border: 2px solid var(--decoration-color);
-  padding: 2px 0 2px 20px;
+  padding: 2px 20px 2px 20px;
   margin: 0;
   font-style: italic;
 }
@@ -175,6 +182,9 @@ p > code, li > code {
     background-color: color-mix(in srgb, var(--selection-color), transparent 70%);
 }
 
+.footnotes {
+    padding-top: 1rem;
+}
 .footnotes, footer {
     font-size: 0.75rem;
 }
