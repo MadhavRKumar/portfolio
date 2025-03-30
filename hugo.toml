@@ -19,6 +19,13 @@ theme = 'smol-cat'
     weight = 10
 
   [[menu.main]]
+    identifier = "now"
+    name = "Now"
+    url = "/now"
+    weight = 15
+
+
+  [[menu.main]]
     identifier = "posts"
     name = "Posts"
     url = "/posts"
