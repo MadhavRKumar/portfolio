@@ -14,6 +14,10 @@ aside h1 { font-size: 2.5rem }
     }
 }
 
+span.email b {
+  display: none;
+}
+
 html {overflow-y: scroll; }
 :root {
     --ctp-latte-rosewater: #dc8a78;
