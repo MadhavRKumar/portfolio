@@ -1,9 +1,6 @@
 baseURL = 'https://madhavrkumar.com'
 languageCode = 'en-us'
-
 title = 'Madhav Kumar'
-author = 'Madhav Kumar'
-description = "Madhav Kumar's personal site. This is where I write. This is where I tend to my digital garden."
 enableGitInfo = true
 
 theme = 'smol-cat'
@@ -11,6 +8,9 @@ theme = 'smol-cat'
 [params]
     dateFmt = "2006-01-02"
     defaultEmail="madhavrkumar@gmail.com"
+    title = 'Madhav Kumar'
+    author = 'Madhav Kumar'
+    description = "Madhav Kumar's personal website. This is where I share ideas, learnings, and experiments. I talk about software engineering and life in general."
 
 [menu]
   [[menu.main]]
