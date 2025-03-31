@@ -12,6 +12,10 @@
 			<div class="post">
 				{{ .Content }}
 			</div>
+            {{ if .Params.ShowModifiedDate }}
+                <hr>
+                <sub><b>Last Updated:</b> <time>{{ .Lastmod | time.Format "2006-01-02"  }}</time></sub>
+            {{ end }}
 		</article>
 	</main>
 {{ end }}
