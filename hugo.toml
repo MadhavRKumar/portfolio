@@ -7,7 +7,6 @@ description = "Madhav Kumar's personal site. This is where I write. This is wher
 
 theme = 'smol-cat'
 
-
 [params]
     dateFmt = "2006-01-02"
     defaultEmail="madhavrkumar@gmail.com"
