@@ -40,7 +40,7 @@ theme = 'smol-cat'
 
   [[menu.footer]]
     name = "RSS"
-    url = "/index.xml"
+    url = "/posts/index.xml"
     weight = 10
 
   [[menu.footer]]

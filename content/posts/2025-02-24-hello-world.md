@@ -16,7 +16,7 @@ Outside of that, I yearn for a return[^4] to personal online spaces as avenues f
 
 I aim to put out a post once a week. No restrictions on length or effort. I just want to start the habit and see where it goes from there.
 
-Subscribe to my [RSS feed](/index.xml) if you want to follow along.
+Subscribe to my [RSS feed](/posts/index.xml) if you want to follow along.
 
 ## Posts that inspired me
 - [Write it Now - Josh Thompson]( https://josh.works/write-it-now#jan-2024 )

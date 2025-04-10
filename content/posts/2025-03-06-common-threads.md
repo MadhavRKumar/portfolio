@@ -44,7 +44,7 @@ Since this is a [pattern language](https://en.wikipedia.org/wiki/Pattern_languag
 Where `Fibers` are the sources being spun together to create the Common Thread. 
 
 The first Common Thread is coming soon to a [madhavrkumar.com](https://www.madhavrkumar.com) near you. Subscribe
-to the [RSS feed](/index.xml) if you want to follow along.
+to the [RSS feed](/posts/index.xml) if you want to follow along.
 
 [^1]: I deeply dislike the connotations of the word "content" i.e. a product, a thing meant to be consumed for the sake of consumption, slop created by AI to maximize ad revenues. But, it's a useful word to refer to multiple forms of media.  
 
