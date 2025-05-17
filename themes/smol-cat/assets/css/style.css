@@ -209,3 +209,8 @@ p > code, li > code {
 .highlight pre {
   overflow-x: auto;
 }
+
+table {
+    table-layout: fixed;
+    width: 100%;
+}
