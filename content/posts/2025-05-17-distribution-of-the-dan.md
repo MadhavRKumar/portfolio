@@ -19,7 +19,7 @@ Following our [inverted pyramid structure](https://en.wikipedia.org/wiki/Inverte
 
 ### Data
 |   District | Council Person   |   Trail Length (miles) |   Percentage (%) |
-|-----------:|:-----------------|-----------------------:|-----------------:|
+|:-----------|:-----------------|-----------------------:|-----------------:|
 |          1 | Meghan Smith     |                   0    |             0    |
 |          2 | Rob Rain         |                   2.47 |            10.13 |
 |          3 | Ruth Littlejohn  |                   2    |             8.19 |
