@@ -83,8 +83,8 @@ of HBO to fund hiring all of those actors, building elaborate sets, creating and
 absurd makeup and prosthetics, and even stilt walkers at one point.
 
 
-[^1] There is maybe something to be said about how our jobs shape the way we view the world. 
+[^1]: There is maybe something to be said about how our jobs shape the way we view the world. 
 It's semi-annual review season for those who participate.
-[^2] Dwarf Fortress has taught me that losing is FUN.
-[^3] My partner came into the first season of *The Rehearsal* completely unfamiliar
+[^2]: Dwarf Fortress has taught me that losing is FUN.
+[^3]: My partner came into the first season of *The Rehearsal* completely unfamiliar
 with *Nathan for You*. It was a jarring experience to say the least.
