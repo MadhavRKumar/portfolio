@@ -15,7 +15,7 @@
 		{{ end }}
 
 		<ul>
-		    {{ range .Paginator.Pages }}
+		    {{ range .Pages }}
 		    <li>
 		        <div class="post-title">
 				{{ if eq $listtitle "Posts" }}
@@ -29,6 +29,5 @@
 		</ul>
         </article>
         {{ end }}
-		{{ partial "pagination.html" . }}
 	</main>
 {{ end }}
