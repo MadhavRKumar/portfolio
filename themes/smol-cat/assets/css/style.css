@@ -125,7 +125,7 @@ body{
     max-width:800px;
     margin:40px auto;
     padding:0 10px;
-    font:1rem/1.5 monospace;
+    font: 1rem/1.5 "Roboto Mono",monospace;
     color:var(--fontcolor);
     background: var(--bgcolor)
 }
