@@ -3,6 +3,8 @@ title: "Spartanburg Place:Non-Place Ratio"
 date: 2025-06-29T10:39:03-04:00
 slug: 2025-06-29-spartanburg-place-non-place-ratio
 type: posts
+tags:
+  - urbanism
 ---
 
 I recently read about [Places and Non-Places](https://www.strongtowns.org/journal/2014/10/14/places-and-non-places)

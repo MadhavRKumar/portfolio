@@ -3,6 +3,8 @@ title: "Distribution of the Daniel Morgan Trail System"
 date: 2025-05-17T11:01:54-04:00
 slug: 2025-05-17-distribution-of-the-dan
 type: posts
+tags:
+  - urbanism
 ---
 
 About a month ago, I was speaking to [Liv from The Walking Spartan](https://walkingspartan.substack.com/) about, unsurprisingly, walkability and bikeability in our
