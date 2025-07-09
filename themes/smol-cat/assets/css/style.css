@@ -210,7 +210,8 @@ p > code, li > code {
   overflow-x: auto;
 }
 
-table {
+/* Style regular tables but don't affect code blocks with line number */
+table:not(.lntable) {
     table-layout: fixed;
     width: 100%;
 }
