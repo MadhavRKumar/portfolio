@@ -73,3 +73,6 @@ theme = 'smol-cat'
     ordered = true
     startLevel = 2
 
+  [markup.goldmark.renderer]
+    unsafe = true
+
