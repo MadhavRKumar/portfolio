@@ -168,7 +168,7 @@ a:visited{color: var(--linkcolor)}
 blockquote{
   border: 2px solid var(--decoration-color);
   padding: 2px 20px 2px 20px;
-  margin: 0;
+  margin: 20px 0;
   font-style: italic;
 }
 hr{
